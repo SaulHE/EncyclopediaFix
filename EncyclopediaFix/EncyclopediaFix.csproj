@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{D9F355E7-69F3-42BB-9CF1-4F5490C81C5D}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>EncyclopediaFix</RootNamespace>
+        <AssemblyName>EncyclopediaFix</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <GameFolder>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord</GameFolder>
+        <LangVersion>8</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>x64</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>$(GameFolder)\Modules\EncyclopediaFix\bin\Win64_Shipping_Client</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <ResourceFile Include="Resource\**\*.*" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7">
+          <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+        <Reference Include="System.Xml" />
+        <Reference Include="TaleWorlds.CampaignSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.CampaignSystem.ViewModelCollection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.ViewModelCollection.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Core.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Core.ViewModelCollection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Core.ViewModelCollection.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Diamond, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Diamond.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Diamond.AccessProvider.Epic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Epic.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Diamond.AccessProvider.Steam, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Steam.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Diamond.AccessProvider.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Test.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.DotNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.DotNet.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.DotNet.AutoGenerated, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.DotNet.AutoGenerated.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Engine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Engine.AutoGenerated, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.AutoGenerated.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Engine.GauntletUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.GauntletUI.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.Data.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI.ExtraWidgets, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.ExtraWidgets.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI.PrefabSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.PrefabSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI.TooltipExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.TooltipExtensions.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.InputSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.InputSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Library.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Localization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Localization.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade.AutoGenerated, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.AutoGenerated.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade.Diamond, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Diamond.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade.GauntletUI.Widgets, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.GauntletUI.Widgets.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Helpers.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade.ViewModelCollection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.ViewModelCollection.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.NavigationSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.NavigationSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Network, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Network.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.ObjectSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.PlatformService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.PlatformService.Epic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.Epic.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.PlatformService.Steam, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.Steam.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.PlayerServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.PlayerServices.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.PSAI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.PSAI.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.SaveSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.SaveSystem.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Starter.DotNetCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Starter.DotNetCore.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Starter.Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Starter.Library.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.TwoDimension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.TwoDimension.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.TwoDimension.Standalone, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>G:\steam\installation\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.TwoDimension.Standalone.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="EncyclopediaFixSubModule.cs" />
+        <Compile Include="HeroStringIdManager.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Utils.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Bannerlord" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="packages.config" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Target Name="AfterBuild">
+        <Exec Command="if not exist &quot;$(GameFolder)\Modules\EncyclopediaFix&quot; mkdir &quot;$(GameFolder)\Modules\EncyclopediaFix\bin\Win64_Shipping_Client&quot;" />
+        <Copy SourceFiles="@(ResourceFile)" DestinationFiles="@(ResourceFile->'$(GameFolder)\Modules\EncyclopediaFix\%(RecursiveDir)%(Filename)%(Extension)')" />
+    </Target>
+
+</Project>
