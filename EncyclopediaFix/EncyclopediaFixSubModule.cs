@@ -12,11 +12,15 @@ namespace EncyclopediaFix
         {
             base.OnGameInitializationFinished(game);
 
-            HeroStringIdManager.SyncMBCharacterStringIdToHeroStringIdManager();
-            HeroStringIdManager.LogAllStringIdofManager();
+            if (game.GameType is Campaign)
+            {
+                HeroStringIdManager.SyncMBCharacterStringIdToHeroStringIdManager();
+                HeroStringIdManager.LogAllStringIdofManager();
 
-            MBObjectManager.Instance.TrySetFieldValue("_lastGeneratedId",
-                HeroStringIdManager.GenerateNonDuplicateStringIdNum());
+                MBObjectManager.Instance.TrySetFieldValue("_lastGeneratedId",
+                    HeroStringIdManager.GenerateNonDuplicateStringIdNum());
+            }
+
             // GrowthDebug.LogInfo(
             //     $"the last generatedId is {MBObjectManager.Instance.TryGetFieldValue("_lastGeneratedId")}");
         }
